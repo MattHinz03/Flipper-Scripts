@@ -17,7 +17,7 @@ while (1) {
     }
 
     if ($run) {
-        $rnd = Get-Random -Minimum minTime -Maximum maxTime
+        $rnd = Get-Random -Minimum $minTime -Maximum $maxTime
         Start-Sleep -Seconds $rnd
         taskkill /F /IM steam.exe
         taskkill /F /IM upc.exe
